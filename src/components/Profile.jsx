@@ -22,7 +22,7 @@ const Profile = () => {
           되겠습니다.
         </p>
         <div className="profileImg">
-          <img src="src/assets/my-notion-face-portrait.png" alt="profile" />
+          <img src="/my-notion-face-portrait.png" alt="profile" />
         </div>
       </div>
 

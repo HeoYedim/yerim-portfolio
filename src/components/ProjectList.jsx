@@ -14,10 +14,10 @@ const projects = [
     learnings: ["TMDB, Google Books API 추가", "Vercel 배포"],
     challenges: ["드롭다운 useEffect 문제"],
     images: [
-      "src/assets/MRL_main.png",
-      "src/assets/MRL_new.png",
-      "src/assets/MRL_review.png",
-      "src/assets/MRL_edit.png",
+      "/MRL_main.png",
+      "/MRL_new.png",
+      "/MRL_review.png",
+      "/MRL_edit.png",
     ],
     demoLink: "https://my-review-log.vercel.app/",
     detailsLink:
@@ -34,9 +34,9 @@ const projects = [
     ],
     challenges: ["디자인 구현"],
     images: [
-      "src/assets/portfolio_cover.png",
-      "src/assets/portfolio_info.png",
-      "src/assets/portfolio_project.png",
+      "/portfolio_cover.png",
+      "/portfolio_info.png",
+      "/portfolio_project.png",
     ],
     demoLink: "https://",
     detailsLink: "https://github.com/HeoYedim/yerim-portfolio",
