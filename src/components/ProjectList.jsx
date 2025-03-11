@@ -38,7 +38,7 @@ const projects = [
       "/portfolio_info.png",
       "/portfolio_project.png",
     ],
-    demoLink: "https://",
+    demoLink: "https://yerim-portfolio.vercel.app/",
     detailsLink: "https://github.com/HeoYedim/yerim-portfolio",
   },
 ];
