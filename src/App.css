@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 종이가 넘겨지는 애니메이션 */
+.flipped {
+  transform: rotateY(90deg);
+}

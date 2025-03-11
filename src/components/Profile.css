@@ -1,0 +1,109 @@
+.Profile {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #f8f1e5;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.1s;
+  padding: 20px;
+  max-width: 100vw;
+  min-width: 960px;
+}
+
+/* 서서히 나타나는 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.futureVision {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profileIntro strong {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profileImg {
+  width: 150px;
+  height: 170px;
+  margin: 10px 30px;
+}
+
+.profileImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileWrapper {
+  display: flex;
+}
+
+.profileLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profileInfo,
+.profileSkills {
+  width: 95%;
+  border-top: solid 3px black;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.profileInfo p,
+.profileSkills p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.profileInfo a {
+  color: black;
+  font-weight: normal;
+}
+
+.profileSkills h2 {
+  margin-top: 20px;
+}
+
+/* 3. 오른쪽 추가 정보 섹션 */
+.profileRight {
+  width: 50%;
+  padding: 20px;
+  border: 3px solid black;
+  margin-bottom: 40px;
+  /* margin-right: 20px; */
+}
+
+.profileRight h3,
+.profileRight h4 {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.profileRight ul {
+  padding-left: 20px;
+}
+
+.profileRight ul li {
+  margin-bottom: 5px;
+}
+
+.bottomRights {
+  text-align: center;
+  padding: 10px;
+}

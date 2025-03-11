@@ -1,0 +1,24 @@
+/* 기본적인 여백 제거 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto 0;
+
+  min-width: 900px;
+  /* background-color: #f4d03f; */
+}
+
+/* React 앱의 root 요소를 전체 화면 차지하도록 설정 */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* 모든 요소에 box-sizing 적용 */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}

@@ -1,0 +1,118 @@
+.Project {
+  padding: 20px;
+  border: solid 3px black;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.projectWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.projectLeft {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  margin: 0 30px;
+  padding: 0 20px;
+
+  min-width: 390px;
+}
+
+.projectLeft h2 {
+  margin: 10px;
+}
+
+.projectImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 좌우 이동 버튼 */
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.arrowLeft {
+  left: -30px;
+}
+
+.arrowRight {
+  right: -30px;
+}
+
+/* 페이지네이션 (하단 점) */
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #f4d03f;
+}
+
+.projectButtons {
+  margin: 40px 20px 20px 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.btnBlue {
+  background: #327ebd;
+  color: white;
+}
+
+.btnRed {
+  background: #ff8c7f;
+  color: white;
+}
+
+/* 우측 프로젝트 정보 */
+.projectRight {
+  margin: 5px 20px;
+  padding-left: 70px;
+  height: 512px;
+
+  max-width: 500px;
+}
+
+.projectRight h1 {
+  text-align: center;
+  margin: 20px 0 30px 0;
+}
+
+.projectRight p {
+  margin-bottom: 10px;
+}
+.projectRight ul {
+  margin-top: 0px;
+}
