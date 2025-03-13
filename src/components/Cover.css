@@ -8,7 +8,8 @@
   position: relative;
   padding: 20px;
   max-width: 100vw;
-  min-width: 815px;
+  min-width: 970px;
+  min-height: 710px;
 }
 
 .Cover::after {
