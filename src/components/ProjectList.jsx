@@ -20,8 +20,7 @@ const projects = [
       "/MRL_edit.png",
     ],
     demoLink: "https://my-review-log.vercel.app/",
-    detailsLink:
-      "https://www.notion.so/My-Review-Log-19f1d19d71d680e4ba9eefb08d84a7c8?pvs=4",
+    detailsLink: "https://github.com/HeoYedim/MyReviewLog",
   },
   {
     title: "Portfolio",

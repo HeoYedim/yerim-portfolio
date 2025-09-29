@@ -87,6 +87,7 @@
   border: 3px solid black;
   margin-bottom: 40px;
   /* margin-right: 20px; */
+  min-width: 386px;
 }
 
 .profileRight h3,

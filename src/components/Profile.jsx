@@ -61,13 +61,15 @@ const Profile = () => {
           <div className="profileSkills">
             <h2>&lt;Skills /&gt;</h2>
             <p>
-              <strong>Languages :</strong> HTML/CSS/JavaScript, Python
+              <strong>Languages :</strong> HTML/CSS/JavaScript, TypeScript,
+              Python
             </p>
             <p>
               <strong>Frameworks & Libraries :</strong> React, MUI
             </p>
             <p>
-              <strong>Development & Version Control :</strong> Vercel, Github
+              <strong>Development & Version Control :</strong> Vercel, Supabase,
+              Github
             </p>
             <p>
               <strong>Design & Collaboration :</strong> Figma, Notion, Jira,
@@ -88,14 +90,25 @@ const Profile = () => {
             <li>웹 및 AI를 이용한 iOS/Android 앱 개발</li>
           </ul>
           <p>
-            <strong>관심 기술 :</strong> UI/UX
+            <strong>관심 기술</strong>
+            <ul>
+              <li>UI/UX</li>
+              <li>Next.js</li>
+            </ul>
           </p>
           <p>
-            <strong>스터디 그룹 -</strong> 웹 프로젝트 진행 중
+            <strong>스터디 그룹</strong>
           </p>
           <ul>
-            <li>채팅 구현 (백엔드와 연결)</li>
-            <li>UI 기획 및 와이어프레임 제작</li>
+            <li>SNS 웹 프로젝트 진행 중</li>
+            <ul>
+              <li>백엔드 팀원과 로그인 및 사용자 데이터 연결 ing</li>
+              <li>UI 기획 및 와이어프레임 제작</li>
+            </ul>
+            <li>
+              원주시 공공데이터 활용 아이디어 공모전 1차 통과 (50여 팀 중 18팀에
+              속함){" "}
+            </li>
           </ul>
         </div>
       </div>
