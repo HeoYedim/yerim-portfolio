@@ -49,13 +49,13 @@ const Profile = () => {
               <strong>GPA :</strong> 4.08 / 4.5
             </p>
             <p>
-              <strong>Github : </strong>{" "}
+              <strong>GitHub : </strong>{" "}
               <a
                 href="https://github.com/HeoYedim"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Heo Yerim Github
+                Heo Yerim GitHub
               </a>
             </p>
             <p>
@@ -65,15 +65,15 @@ const Profile = () => {
           <div className="profileSkills">
             <h2>&lt;Skills /&gt;</h2>
             <p>
-              <strong>Languages :</strong> Html/Css/JavaScript, TypeScript,
-              tailwindcss, Python
+              <strong>Languages :</strong> HTML/CSS/JavaScript, TypeScript,
+              Tailwind CSS, Python
             </p>
             <p>
-              <strong>Frameworks & Libraries :</strong> React, Mui, Shadcn
+              <strong>Frameworks & Libraries :</strong> React, MUI, Shadcn
             </p>
             <p>
-              <strong>Development & Version Control :</strong> Rest API, Vercel,
-              Supabase, Github
+              <strong>Development & Version Control :</strong> REST API, Vercel,
+              Supabase, GitHub
             </p>
             <p>
               <strong>Design & Collaboration :</strong> Figma, Notion, Jira,
