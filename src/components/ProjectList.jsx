@@ -29,9 +29,10 @@ const projects = [
     summary: "개인 포트폴리오 웹사이트",
     features: ["프로젝트 목록 관리"],
     learnings: [
-      "Github Pages로 배포 후 경로 문제로 인한 재배포 오류 지속적으로 발생. 이를 해결하기 위해 보다 적합한 배포 방식인 Vercel로 진행. 정적 사이트 배포 환경에 대해 알게 됨",
+      "배포 환경에 따른 경로 설정 방식의 차이 이해",
+      "프로젝트 특성에 맞는 배포 방식을 선택의 중요성 이해",
     ],
-    challenges: ["디자인 구현"],
+    challenges: ["커버 화면의 버튼 디자인 구현"],
     images: [
       "/portfolio_cover.png",
       "/portfolio_info.png",

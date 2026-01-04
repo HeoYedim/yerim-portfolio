@@ -6,13 +6,17 @@ const Profile = () => {
     <div className="Profile">
       <div className="futureVision">
         <p className="profileIntro">
-          <strong>“미래를 기획하고 현재를 개발하는 프론트엔드 개발자”</strong>
+          <strong>
+            “구조적 설계와 원활한 소통을 통해 팀의 개발 효율을 높이는 프론트엔드
+            개발자입니다.”
+          </strong>
           <br />
           <br />
-          기획과 UI/UX에 흥미가 있어 다양한 사이트를 분석하는 것을 좋아합니다.
+          React와 Typescript를 기반으로 컴포넌트 책임과 상태 구조를 명확히
+          나누는 설계를 지향합니다.
           <br />
-          아이디어를 기록하고 정리하여 필요할 때 적절히 활용하는 것이 저의
-          강점입니다.
+          기획 의도와 변경 사항을 정리해 공유하는 개발 방식을 선호하며, 협업과
+          유지보수를 함께 고려합니다.
           <br />
           <br />
           협업과 커뮤니케이션을 중요시하며, 이를 바탕으로 보다 나은 서비스
@@ -21,9 +25,9 @@ const Profile = () => {
           앞으로 기술적 성장과 원활한 소통을 통해 팀과 함께 발전하는 개발자가
           되겠습니다.
         </p>
-        <div className="profileImg">
+        {/* <div className="profileImg">
           <img src="/my-notion-face-portrait.png" alt="profile" />
-        </div>
+        </div> */}
       </div>
 
       <div className="profileWrapper">
@@ -61,27 +65,34 @@ const Profile = () => {
           <div className="profileSkills">
             <h2>&lt;Skills /&gt;</h2>
             <p>
-              <strong>Languages :</strong> HTML/CSS/JavaScript, TypeScript,
-              Python
+              <strong>Languages :</strong> Html/Css/JavaScript, TypeScript,
+              tailwindcss, Python
             </p>
             <p>
-              <strong>Frameworks & Libraries :</strong> React, MUI
+              <strong>Frameworks & Libraries :</strong> React, Mui, Shadcn
             </p>
             <p>
-              <strong>Development & Version Control :</strong> Vercel, Supabase,
-              Github
+              <strong>Development & Version Control :</strong> Rest API, Vercel,
+              Supabase, Github
             </p>
             <p>
               <strong>Design & Collaboration :</strong> Figma, Notion, Jira,
               Confluence
             </p>
+            {/* <p>
+              <strong>Architecture :</strong> Rest API
+            </p> */}
           </div>
         </div>
 
         <div className="profileRight">
           <h3>&lt;More About Me! /&gt;</h3>
           <p>
-            <strong>자격증 :</strong> SQLD (2024.12)
+            <strong>자격증</strong>
+            <ul>
+              <li>SQLD (2024.12)</li>
+              <li>정보처리기사 (2025.12)</li>
+            </ul>
           </p>
           <strong>ICT융합학부 스마트콘텐츠 전공</strong>
           <ul>
@@ -97,14 +108,13 @@ const Profile = () => {
             </ul>
           </p>
           <p>
-            <strong>스터디 그룹</strong>
+            <strong>기타 개발 활동</strong>
           </p>
           <ul>
-            <li>SNS 웹 프로젝트 진행 중</li>
-            <ul>
-              <li>백엔드 팀원과 로그인 및 사용자 데이터 연결 ing</li>
-              <li>UI 기획 및 와이어프레임 제작</li>
-            </ul>
+            <li>
+              Swagger로 정의된 <strong>REST API</strong>를 기반으로 백엔드와
+              협업하여 프론트엔드 연동을 진행 중
+            </li>
             <li>
               원주시 공공데이터 활용 아이디어 공모전 1차 통과 (50여 팀 중 18팀에
               속함){" "}
