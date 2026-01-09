@@ -69,12 +69,12 @@ const Profile = () => {
                 <div className="skillHeader">
                   <strong>Languages</strong>
                   <div className="skillIcons">
-                    <img src="public/HTML.svg" alt="HTML" />
-                    <img src="public/CSS.svg" alt="CSS" />
-                    <img src="public/JavaScript.svg" alt="JS" />
-                    <img src="public/TypeScript.svg" alt="TS" />
-                    <img src="public/TailwindCSS-Dark.svg" alt="TailwindCSS" />
-                    <img src="public/Python-Light.svg" alt="Python" />
+                    <img src="/HTML.svg" alt="HTML" />
+                    <img src="/CSS.svg" alt="CSS" />
+                    <img src="/JavaScript.svg" alt="JS" />
+                    <img src="/TypeScript.svg" alt="TS" />
+                    <img src="/TailwindCSS-Dark.svg" alt="TailwindCSS" />
+                    <img src="/Python-Light.svg" alt="Python" />
                   </div>
                 </div>
                 <p>HTML/CSS/JavaScript, TypeScript, Tailwind CSS, Python</p>
@@ -84,8 +84,8 @@ const Profile = () => {
                 <div className="skillHeader">
                   <strong>Frameworks & Libraries</strong>
                   <div className="skillIcons">
-                    <img src="public/React.svg" alt="React" />
-                    <img src="public/MaterialUI-Dark.svg" alt="MUI" />
+                    <img src="/React.svg" alt="React" />
+                    <img src="/MaterialUI-Dark.svg" alt="MUI" />
                   </div>
                 </div>
                 <p>React, MUI, Shadcn</p>
@@ -95,9 +95,9 @@ const Profile = () => {
                 <div className="skillHeader">
                   <strong>Deployment & Backend Services</strong>
                   <div className="skillIcons">
-                    <img src="public/Vercel-Light.svg" alt="Vercel" />
-                    <img src="public/Supabase-Dark.svg" alt="Supabase" />
-                    <img src="public/Github-Dark.svg" alt="GitHub" />
+                    <img src="/Vercel-Light.svg" alt="Vercel" />
+                    <img src="/Supabase-Dark.svg" alt="Supabase" />
+                    <img src="/Github-Dark.svg" alt="GitHub" />
                   </div>
                 </div>
                 <p>REST API, Vercel, Supabase, GitHub</p>
@@ -107,12 +107,12 @@ const Profile = () => {
                 <div className="skillHeader">
                   <strong>Design & Collaboration</strong>
                   <div className="skillIcons">
-                    <img src="public/Figma.svg" alt="Figma" />
+                    <img src="/Figma.svg" alt="Figma" />
                     <div className="iconWrapper">
-                      <img src="public/Jira.svg" alt="Jira" />
+                      <img src="/Jira.svg" alt="Jira" />
                     </div>
                     <div className="iconWrapper">
-                      <img src="public/Confluence.svg" alt="Confluence" />
+                      <img src="/Confluence.svg" alt="Confluence" />
                     </div>
                   </div>
                 </div>
