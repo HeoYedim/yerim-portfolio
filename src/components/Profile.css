@@ -1,52 +1,69 @@
 .Profile {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+
+  padding: 120px 24px 30px;
+
   width: 100%;
-  /* height: 100vh; */
-  background-color: #f8f1e5;
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
-  opacity: 0;
-  animation: fadeIn 1s forwards 0.1s;
-  padding: 20px;
-  max-width: 100vw;
-  min-width: 960px;
+  gap: 60px;
 }
 
-/* 서서히 나타나는 애니메이션 */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.profileCard_white {
+  background-color: white;
+  border-radius: 20px;
+  padding: 32px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.profileCard_muteblue {
+  background-color: #7794a6;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.profileCard_muteyellow {
+  background-color: #f2c36b;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .futureVision {
+  /* justify-content: space-between; */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profileIntro {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1c1c1c;
+  align-items: center;
 }
 
 .profileIntro strong {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.profileImg {
-  width: 150px;
-  height: 170px;
-  margin: 10px 30px;
-}
-
-.profileImg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .profileWrapper {
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .profileLeft {
@@ -57,12 +74,62 @@
   margin-bottom: 30px;
 }
 
-.profileInfo,
 .profileSkills {
   width: 95%;
-  border-top: solid 3px black;
   margin-bottom: 20px;
   padding-top: 10px;
+}
+
+.skillItem {
+  margin-bottom: 16px;
+}
+.skillHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.skillHeader strong {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.skillIcons {
+  display: flex;
+  gap: 6px;
+}
+
+.skillIcons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+}
+
+.iconWrapper img {
+  width: 18px;
+  height: 18px;
+}
+
+.profileInfo {
+  display: flex;
+  gap: 100px;
+  /* padding: 10px 0px 0px 40px; */
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .profileInfo p,
@@ -80,20 +147,24 @@
   margin-top: 20px;
 }
 
+.profileSkills p {
+  padding-top: 5px;
+}
+
 /* 3. 오른쪽 추가 정보 섹션 */
 .profileRight {
-  width: 50%;
+  /* width: 50%; */
   padding: 20px;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   margin-bottom: 40px;
   /* margin-right: 20px; */
   min-width: 386px;
+  font-size: large;
 }
 
-.profileRight h3,
-.profileRight h4 {
-  margin-top: 5px;
-  font-weight: bold;
+.profileRight h3 {
+  margin-top: 10px;
+  padding-top: 20px;
 }
 
 .profileRight ul {
@@ -107,4 +178,102 @@
 .bottomRights {
   text-align: center;
   padding: 10px;
+}
+
+.projectSection {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  color: #1c1c1c;
+}
+
+@media (max-width: 768px) {
+  .Profile {
+    padding: 80px 16px 24px;
+    gap: 40px;
+  }
+
+  /* 카드 padding 축소 */
+  .profileCard_white,
+  .profileCard_muteyellow,
+  .profileCard_muteblue {
+    padding: 20px;
+  }
+
+  /* 소개 문구 */
+  .profileIntro {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .profileIntro strong {
+    font-size: 14px;
+  }
+
+  .profileInfo p {
+    font-size: 14px;
+  }
+
+  /* 정보 영역: 좌우 → 세로 */
+  .profileInfo {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  /* wrapper: 2열 → 1열 */
+  .profileWrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Skills */
+  .profileSkills h2,
+  .profileCertificate h2,
+  .profileRight h2 {
+    font-size: 20px;
+  }
+
+  .skillHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .skillHeader strong {
+    font-size: 16px;
+  }
+
+  .skillIcons {
+    flex-wrap: wrap;
+  }
+
+  .skillIcons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .iconWrapper {
+    width: 20px;
+    height: 20px;
+  }
+
+  .iconWrapper img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Right 영역 */
+  .profileRight {
+    min-width: auto;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .profileRight ul {
+    padding-left: 18px;
+  }
 }

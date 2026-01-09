@@ -1,108 +1,112 @@
-.Cover {
-  background-color: #f4d03f;
-  width: 100%;
-  height: 100vh;
+.coverLayer {
+  position: fixed;
+  inset: 0;
+  background-color: #023373;
+  z-index: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  padding: 20px;
-  max-width: 100vw;
-  min-width: 970px;
-  min-height: 710px;
+  align-items: center;
+
+  overflow: hidden;
 }
 
-.Cover::after {
-  content: "";
-  position: absolute;
-  top: 30%;
-  right: 0;
-  width: 70px;
-  height: 70%;
-  background-color: #f8f1e5;
+/* 초기 상태 */
+.name,
+.subtitle,
+.portfolio {
+  white-space: nowrap;
+  will-change: transform, opacity;
 }
 
 .name {
-  font-size: 150px;
+  font-size: 110px;
   font-weight: 800;
-  text-transform: uppercase;
+  /* text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 4px black; /* 텍스트 윤곽선 */
-  margin-bottom: 10px;
-  margin-top: 20px;
+  -webkit-text-stroke: 4px black; 텍스트 윤곽선 */
+  color: white;
+  margin-bottom: 30px;
+  margin-top: 0px;
 }
 
 .subtitle {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
-  color: black;
+  color: #7794a6;
   margin-left: 20px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .portfolio {
-  font-size: 120px;
-  font-weight: bold;
-  text-transform: capitalize;
+  font-size: 70px;
+  /* text-transform: capitalize;
   color: transparent;
-  -webkit-text-stroke: 4px black; /* 텍스트 윤곽선 */
+  -webkit-text-stroke: 4px black; 텍스트 윤곽선 */
+  color: white;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* 설명 텍스트 */
-.description {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 20px;
-  color: black;
-  word-break: break-word;
-}
-
-/* 클릭 유도 텍스트 */
-.clickText {
-  font-size: 24px;
-  margin-top: 10px;
-  color: #259811;
-  font-weight: bold;
-  word-break: break-word;
-}
-
-.highlight {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.topSecret {
-  font-size: 58px;
-  font-weight: bold;
-  color: red;
-  border: 4px solid red;
-  padding: 10px 20px;
+.scrollHint {
   position: absolute;
-  bottom: 120px;
-  /* right: 100px; */
-  left: 500px;
-  transform: rotate(-10deg);
-  background-color: initial;
-  cursor: pointer;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  animation: flash 0.8s infinite alternate;
+  font-size: 32px;
+  opacity: 0.6;
+  color: rgb(168, 46, 18);
+  font-weight: 600;
+
+  animation: blink 1.5s infinite;
 }
 
-.topSecret:hover {
-  transform: rotate(-10deg) scale(1.1);
-}
-
-@keyframes flash {
+@keyframes blink {
   0% {
-    background-color: transparent;
+    opacity: 0.2;
   }
   50% {
-    background-color: rgba(255, 0, 0, 0.2);
+    opacity: 0.8;
   }
   100% {
-    background-color: transparent;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .portfolio {
+    font-size: 36px;
+  }
+
+  .scrollHint {
+    font-size: 20px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverLayer {
+    padding: 0 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 80vh;
   }
 }

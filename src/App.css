@@ -1,13 +1,10 @@
-.App {
-  display: flex;
-  flex-direction: column;
+.coverContainer {
+  height: 200vh; /* 100vh는 글자가 움직이는 구간, 나머지 100vh는 Profile이 올라오는 구간 */
+  position: relative;
+}
 
+/* .App {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* 종이가 넘겨지는 애니메이션 */
-.flipped {
-  transform: rotateY(90deg);
-}
+} */
