@@ -8,8 +8,10 @@ const Project = ({
   techStack,
   summary,
   features,
-  learnings,
-  challenges,
+  contribution,
+  api,
+  // learnings,
+  // challenges,
   serviceStatus,
   images,
   demoLink,
@@ -66,7 +68,7 @@ const Project = ({
             )}
             {detailsLink && (
               <a href={detailsLink} target="_blank" className="btn btnRed">
-                상세 정보
+                GitHub README
               </a>
             )}
           </div>
@@ -88,13 +90,25 @@ const Project = ({
             </div>
 
             <div className="infoRow">
-              <span className="label">사용 기술</span>
-              <span className="value">{techStack}</span>
+              <span className="label">서비스 소개</span>
+              <span className="value">{summary}</span>
             </div>
 
             <div className="infoRow">
-              <span className="label">개발 개요</span>
-              <span className="value">{summary}</span>
+              <span className="label">기술 스택</span>
+              <span className="value">{techStack}</span>
+            </div>
+
+            {api && (
+              <div className="infoRow">
+                <span className="label">사용 API</span>
+                <span className="value">{api}</span>
+              </div>
+            )}
+
+            <div className="infoRow">
+              <span className="label">수행 역할</span>
+              <span className="value">{contribution}</span>
             </div>
           </div>
 
@@ -108,7 +122,7 @@ const Project = ({
               </ul>
             </section>
 
-            <section className="contentSection">
+            {/* <section className="contentSection">
               <h3>배운 점</h3>
               <ul>
                 {learnings.map((learning, index) => (
@@ -124,7 +138,7 @@ const Project = ({
                   <li key={index}>{challenge}</li>
                 ))}
               </ul>
-            </section>
+            </section> */}
           </div>
         </div>
       </div>
