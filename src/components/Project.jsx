@@ -4,11 +4,13 @@ import "./Project.css";
 const Project = ({
   title,
   period,
+  projectType,
   techStack,
   summary,
   features,
   learnings,
   challenges,
+  serviceStatus,
   images,
   demoLink,
   detailsLink,
@@ -72,43 +74,58 @@ const Project = ({
 
         {/* 우측 프로젝트 정보 */}
         <div className="projectRight">
-          <h1>{title}</h1>
-          <p>
-            <strong>개발 기간 :</strong> {period}
-          </p>
-          <p>
-            <strong>사용 기술 :</strong> {techStack}
-          </p>
-          <p>
-            <strong>개발 개요 :</strong> {summary}
-          </p>
+          <div className="projectHeader">
+            <h1 className="projectTitle">{title}</h1>
+            <span className="projectMeta">
+              {projectType} · {serviceStatus}
+            </span>
+          </div>
 
-          <p>
-            <strong>주요 기능</strong>
-          </p>
-          <ul>
-            {features.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
+          <div className="projectInfo">
+            <div className="infoRow">
+              <span className="label">개발 기간</span>
+              <span className="value">{period}</span>
+            </div>
 
-          <p>
-            <strong>배운 점</strong>
-          </p>
-          <ul>
-            {learnings.map((learning, index) => (
-              <li key={index}>{learning}</li>
-            ))}
-          </ul>
+            <div className="infoRow">
+              <span className="label">사용 기술</span>
+              <span className="value">{techStack}</span>
+            </div>
 
-          <p>
-            <strong>힘들었던 점</strong>
-          </p>
-          <ul>
-            {challenges.map((challenge, index) => (
-              <li key={index}>{challenge}</li>
-            ))}
-          </ul>
+            <div className="infoRow">
+              <span className="label">개발 개요</span>
+              <span className="value">{summary}</span>
+            </div>
+          </div>
+
+          <div className="projectContent">
+            <section className="contentSection">
+              <h3>주요 기능</h3>
+              <ul>
+                {features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="contentSection">
+              <h3>배운 점</h3>
+              <ul>
+                {learnings.map((learning, index) => (
+                  <li key={index}>{learning}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="contentSection">
+              <h3>힘들었던 점</h3>
+              <ul>
+                {challenges.map((challenge, index) => (
+                  <li key={index}>{challenge}</li>
+                ))}
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </div>
