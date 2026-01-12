@@ -94,7 +94,7 @@
 
   .scrollHint {
     font-size: 20px;
-    bottom: 16px;
+    bottom: 24px;
   }
 }
 
@@ -107,6 +107,6 @@
 
 @media (max-width: 768px) {
   .content {
-    margin-top: 80vh;
+    margin-top: 100vh;
   }
 }
