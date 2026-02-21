@@ -15,7 +15,7 @@ const Project = ({
   serviceStatus,
   images,
   demoLink,
-  detailsLink,
+  // detailsLink,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -27,7 +27,7 @@ const Project = ({
   // 이전 이미지로 이동
   const prevImage = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
   };
 
@@ -66,11 +66,11 @@ const Project = ({
                 사이트 바로가기
               </a>
             )}
-            {detailsLink && (
+            {/* {detailsLink && (
               <a href={detailsLink} target="_blank" className="btn btnRed">
                 GitHub README
               </a>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -121,24 +121,6 @@ const Project = ({
                 ))}
               </ul>
             </section>
-
-            {/* <section className="contentSection">
-              <h3>배운 점</h3>
-              <ul>
-                {learnings.map((learning, index) => (
-                  <li key={index}>{learning}</li>
-                ))}
-              </ul>
-            </section>
-
-            <section className="contentSection">
-              <h3>힘들었던 점</h3>
-              <ul>
-                {challenges.map((challenge, index) => (
-                  <li key={index}>{challenge}</li>
-                ))}
-              </ul>
-            </section> */}
           </div>
         </div>
       </div>
