@@ -5,18 +5,19 @@ const Project = ({
   title,
   period,
   projectType,
-  techStack,
+  frontend,
+  deployment,
+  api,
+  backend,
   summary,
   features,
   contribution,
-  api,
-  // learnings,
-  // challenges,
   serviceStatus,
   images,
   demoLink,
-  // detailsLink,
+  architectureImage,
 }) => {
+  const [activeTab, setActiveTab] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // 다음 이미지로 이동
@@ -30,6 +31,8 @@ const Project = ({
       (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
   };
+
+  const tabs = ["기본 정보", "주요 기능", "아키텍처"];
 
   return (
     <div className="Project">
@@ -66,11 +69,6 @@ const Project = ({
                 사이트 바로가기
               </a>
             )}
-            {/* {detailsLink && (
-              <a href={detailsLink} target="_blank" className="btn btnRed">
-                GitHub README
-              </a>
-            )} */}
           </div>
         </div>
 
@@ -83,44 +81,101 @@ const Project = ({
             </span>
           </div>
 
-          <div className="projectInfo">
-            <div className="infoRow">
-              <span className="label">개발 기간</span>
-              <span className="value">{period}</span>
-            </div>
+          <nav className="tabNavigation">
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                className={`tabButton ${activeTab === index ? "active" : ""}`}
+                onClick={() => setActiveTab(index)}
+              >
+                {tab}
+              </button>
+            ))}
+          </nav>
 
-            <div className="infoRow">
-              <span className="label">서비스 소개</span>
-              <span className="value">{summary}</span>
-            </div>
+          <div className="tabContent">
+            {/* Tab 1: 기본 정보 */}
+            {activeTab === 0 && (
+              <div className="projectInfo">
+                <div className="infoRow">
+                  <span className="label">개발 기간</span>
+                  <span className="value">{period}</span>
+                </div>
 
-            <div className="infoRow">
-              <span className="label">기술 스택</span>
-              <span className="value">{techStack}</span>
-            </div>
+                <div className="infoRow">
+                  <span className="label">서비스 소개</span>
+                  <span className="value">{summary}</span>
+                </div>
 
-            {api && (
-              <div className="infoRow">
-                <span className="label">사용 API</span>
-                <span className="value">{api}</span>
+                {frontend && (
+                  <div className="infoRow">
+                    <span className="label">Frontend</span>
+                    <span className="value">{frontend}</span>
+                  </div>
+                )}
+
+                {deployment && (
+                  <div className="infoRow">
+                    <span className="label">Deployment</span>
+                    <span className="value">{deployment}</span>
+                  </div>
+                )}
+
+                {(api || backend) && (
+                  <div className="infoRow">
+                    <span className="label">API & Backend</span>
+                    <span className="value">
+                      {[api, backend].filter(Boolean).join(", ")}
+                    </span>
+                  </div>
+                )}
+
+                <div className="infoRow">
+                  <span className="label">수행 역할</span>
+                  <ul className="valueList">
+                    {Array.isArray(contribution) ? (
+                      contribution.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))
+                    ) : (
+                      <li>{contribution}</li>
+                    )}
+                  </ul>
+                </div>
               </div>
             )}
 
-            <div className="infoRow">
-              <span className="label">수행 역할</span>
-              <span className="value">{contribution}</span>
-            </div>
-          </div>
+            {/* Tab 2: 주요 기능 */}
+            {activeTab === 1 && (
+              <div className="projectContent">
+                <ul className="featureList">
+                  {features.map((feature, index) => (
+                    <li key={index}>
+                      <span className="featureText">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          <div className="projectContent">
-            <section className="contentSection">
-              <h3>주요 기능</h3>
-              <ul>
-                {features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </section>
+            {/* Tab 3: 아키텍처 */}
+            {activeTab === 2 && (
+              <div className="projectContent architectureTab">
+                {architectureImage ? (
+                  <div className="architectureWrapper">
+                    <img
+                      src={architectureImage}
+                      alt={`${title} Architecture`}
+                      className="architectureImage"
+                    />
+                  </div>
+                ) : (
+                  <div className="emptyArchitecture">
+                    <p>아키텍처 설계 이미지를 준비 중입니다.</p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

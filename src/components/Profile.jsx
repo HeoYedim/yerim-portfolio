@@ -7,9 +7,7 @@ const Profile = () => {
       <div className="profileCard_white">
         <div className="futureVision">
           <p className="profileIntro">
-            <strong>
-              👋 “안녕하세요 신입 프론트엔드 개발자 허예림입니다.”
-            </strong>
+            <strong>👋 “안녕하세요 프론트엔드 개발자 허예림입니다.”</strong>
             <br />
             React와 Typescript를 기반으로 컴포넌트 책임과 상태 구조를 명확히
             나누는 설계를 지향합니다.
@@ -85,10 +83,11 @@ const Profile = () => {
                   <strong>Frameworks & Libraries</strong>
                   <div className="skillIcons">
                     <img src="/React.svg" alt="React" />
+                    <img src="/NextJS-Light.svg" alt="Next.js" />
                     <img src="/MaterialUI-Dark.svg" alt="MUI" />
                   </div>
                 </div>
-                <p>React, MUI, Shadcn</p>
+                <p>React, Next.js, MUI, Shadcn</p>
               </div>
 
               <div className="skillItem">
@@ -96,11 +95,11 @@ const Profile = () => {
                   <strong>Deployment & Backend Services</strong>
                   <div className="skillIcons">
                     <img src="/Vercel-Light.svg" alt="Vercel" />
+                    <img src="/Cloudflare-Dark.svg" alt="Cloudflare" />
                     <img src="/Supabase-Dark.svg" alt="Supabase" />
-                    <img src="/Github-Dark.svg" alt="GitHub" />
                   </div>
                 </div>
-                <p>REST API, Vercel, Supabase, GitHub</p>
+                <p>Vercel, Cloudflare, REST API, Supabase</p>
               </div>
 
               <div className="skillItem">
@@ -108,6 +107,7 @@ const Profile = () => {
                   <strong>Design & Collaboration</strong>
                   <div className="skillIcons">
                     <img src="/Figma.svg" alt="Figma" />
+                    <img src="/Github-Dark.svg" alt="GitHub" />
                     <div className="iconWrapper">
                       <img src="/Jira.svg" alt="Jira" />
                     </div>
@@ -116,7 +116,7 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-                <p>Figma, Notion, Jira, Confluence</p>
+                <p>Figma, GitHub, Notion, Jira, Confluence</p>
               </div>
             </div>
             <div className="profileCertificate">
@@ -171,9 +171,7 @@ const Profile = () => {
       <div className="projectSection">
         <ProjectList />
       </div>
-      <div className="bottomRights">
-        © 2025 Heo Yeorim. All rights reserved.
-      </div>
+      <div className="bottomRights">© 2025 Heo Yerim. All rights reserved.</div>
     </div>
   );
 };
