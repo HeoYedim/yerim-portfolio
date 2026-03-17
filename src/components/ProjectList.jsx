@@ -27,7 +27,7 @@ const projects = [
     images: ["/dashmo_1.png", "/dashmo_2.png", "dashmo_3.png", "/dashmo_4.png"],
     demoLink: "https://dashmo.space/",
     // detailsLink: "",
-    architectureImage: "public/dashmo-archi.png",
+    architectureImage: "/dashmo-archi.png",
   },
   {
     projectType: "개인",
